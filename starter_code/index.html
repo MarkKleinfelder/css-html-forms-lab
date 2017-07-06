@@ -99,8 +99,6 @@
 		var main = $('#main');
 		function makeResults() {
 
-			$( "<section class='container results'><h1>A True Story:</h1>" ).appendTo(main);
-
 			// JS Native:
 			// var results = document.createElement('section');
 			// results.innerHTML = '<h1>' + 'A true story:' + '</h1>';
@@ -109,10 +107,31 @@
 		};
 
 		$("form").on("submit", function(event){
+			event.preventDefault();
+			makeResults();
 
 		    // Stop the form from submitting
 
 	    	// Run the 'makeResults' function seen above
+
+	    	$( "<section class='container results'><h1>A True Story:</h1>" ).appendTo(main);
+			
+			$('.results').append("<p>").append("Once upon a time there was a Developer named " + $('#name').val() + ".");
+			
+			$('.results').append("<p>").append($('#name').val() + " came to General Assembly to " + $('#verb-1').val() + " the great mountain of programming knowledge.");
+
+			$('.results').append("<p>").append($('#mission').val() + ", " + $('#name').val() + " shouted.");
+			
+			$('.results').append("<p>").append("Though " + $("input[name = sentiment]:checked").val() + ", " + $("#name").val() + " was able to overcome all obstacles with the power of their " + $("#noun-1").val() + ".");
+			//var checkvalue = $('input[name="adjective-2"]:checked');
+			
+			var checkedVals = $('input[name = adjective-2]:checked').map(function(){
+				return this.value;
+					}).get().join(", ");
+				$vals = checkedVals;
+			
+			$('.results').append("<p>").append("In the end, their success can be contributed entirely to their " + checkedVals + " " + $('#noun-2').val() + ".");
+
 
 	    	/*
 			
