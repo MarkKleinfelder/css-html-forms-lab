@@ -1,3 +1,4 @@
+
 /*-------- Utility Styles --------*/
 * {
 	box-sizing: border-box; 
@@ -5,12 +6,21 @@
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
 }
 
+
 /* 
 	Use Google Fonts to make all of the text Proza Libre.
 
 	Make the Title twice as large as the body text, bold, and give it some nice margin.
 */
+body {
+	font-family: 'Proza Libre', sans-serif;
+	line-height: 30px;
+}
 
+h1 {
+	font-size: 200%;
+	margin-top:20px;
+}
 /*-------- Main Styles --------*/
 
 /* 
@@ -21,6 +31,121 @@
 	Every container, form, input, and button should have rounded corners.
 */
 
+.results.container{
+
+}
+
+#main {
+	font-size: 18px;
+	width: 100%;
+	padding-bottom: 50px;
+}
+
+#showMe{ /* <-----------reset button-----<<<<.  */
+	display:none;
+	width:76px;
+	background-color: rgba(255, 50, 50,0.5);
+	font-size:18px;
+	font-weight: bold;
+	border:none;
+	margin-top: 10px;
+	margin-left:370px;
+	float: right;
+}
+
+#showMe:hover {
+	background-color: rgba(255, 50, 50,1);
+}
+
+#noun-1, #noun-2, #name, #verb-1{
+	font-size: 18px;
+	width: 450px;
+	height: 48px;
+	padding: 14px;
+}
+
+#verb-1{
+	font-size: 20px;
+	background-color: white;
+	padding:5px;
+}
+
+
+.form {
+	background-color:#E3E6EC;
+	margin:20px;
+	padding:20px;
+	float:left;
+	border-radius: 5px;
+	max-width: 500px
+
+}
+
+.radioButtons {
+	margin-left: 15px;
+}
+
+.checkboxes {
+	margin-left: 15px;
+}
+
+.results{
+	background-color: #C8DBB3;
+	float:left;
+	border-radius: 5px;
+	margin:20px;
+	padding:20px;
+	max-width: 500px;
+}
+
+input {
+	border:1px solid #CCC;
+	border-radius: 5px;
+
+}
+
+
+textarea {
+	font-size: 18px;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	width:450px;
+	height:100px;
+	padding:14px;
+
+}
+
+.row {
+	
+}
+
+.formGroup{
+	margin:5px;
+	display:inline-block;
+	float:left;
+	clear:both;
+	padding-top:10px;
+	padding-bottom: 10px;
+	
+}
+input[type="submit"]{
+	background-color: rgba(39, 208, 127,0.5);
+	font-size:18px;
+	font-weight: bold;
+	border:none;
+	margin-top: 10px;
+	margin-left:370px;
+	float: right;
+}
+
+input[type="submit"]:hover{
+	background-color: rgba(39, 208, 127,1.0);
+}
+
+
+label{
+
+}
 /*-------- Form Styles --------*/
 
 
